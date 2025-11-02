@@ -1,0 +1,150 @@
+/* ════════════════════════════════════════════════════════════════════════════════════
+   ox_target - FACE SCRIPTS UI Theme
+   Colors: Black / Green
+   ════════════════════════════════════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* FACE SCRIPTS Colors */
+  --color-default: #00ff41;      /* Neon green */
+  --color-hover: #00cc33;        /* Darker green */
+  --bg-primary: #0a0a0a;         /* Dark background */
+  --bg-secondary: #151515;       /* Card background */
+  --text-primary: #ffffff;       /* White text */
+  --text-secondary: #a0a0a0;     /* Gray text */
+  --border-color: #2a2a2a;       /* Border color */
+}
+
+/* ═══════════ BASE ═══════════ */
+body {
+  visibility: hidden;
+  user-select: none;
+  white-space: nowrap;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+/* ═══════════ EYE ICON ═══════════ */
+#eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22pt;
+  fill: #000000;
+  transition: all 0.3s ease;
+}
+
+/* Eye turns green when hovering over target */
+.eye-hover {
+  fill: var(--color-default) !important;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.6));
+}
+
+/* ═══════════ OPTIONS WRAPPER ═══════════ */
+#options-wrapper {
+  position: absolute;
+  top: calc(50% - 11pt);  /* Center vertically */
+  left: calc(50% + 30px); /* Offset from eye */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ═══════════ OPTION CONTAINERS ═══════════ */
+.option-container {
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Roboto";
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(21, 21, 21, 0.85) 66%,
+    rgba(31, 31, 31, 0) 100%
+  );
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22pt;
+  vertical-align: middle;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.option-container:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(21, 21, 21, 0.95) 0%,
+    rgba(31, 31, 31, 0.85) 66%,
+    rgba(47, 48, 53, 0) 100%
+  );
+  border-color: var(--color-default);
+  color: var(--color-default);
+  transform: translateX(5px);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+/* ═══════════ OPTION ICON ═══════════ */
+.option-icon {
+  font-size: 16px;
+  line-height: 22pt;
+  width: 20px;
+  margin-right: 12px;
+  color: var(--color-default);
+  text-align: center;
+}
+
+.option-container:hover .option-icon {
+  color: var(--color-hover);
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+/* ═══════════ OPTION LABEL ═══════════ */
+.option-label {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+/* ═══════════ ANIMATIONS ═══════════ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.option-container {
+  animation: fadeIn 0.2s ease;
+}
+
+/* Stagger animation for multiple options */
+.option-container:nth-child(1) { animation-delay: 0s; }
+.option-container:nth-child(2) { animation-delay: 0.05s; }
+.option-container:nth-child(3) { animation-delay: 0.1s; }
+.option-container:nth-child(4) { animation-delay: 0.15s; }
+.option-container:nth-child(5) { animation-delay: 0.2s; }
+.option-container:nth-child(6) { animation-delay: 0.25s; }
+.option-container:nth-child(7) { animation-delay: 0.3s; }
+.option-container:nth-child(8) { animation-delay: 0.35s; }
+.option-container:nth-child(9) { animation-delay: 0.4s; }
