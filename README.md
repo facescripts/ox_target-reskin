@@ -1,5 +1,9 @@
 This is ox_target (by Overextended) with a redesigned UI featuring the FACE SCRIPTS theme.
 
+https://i.postimg.cc/LgzHcbWz/Screenshot-2025-11-02-134925.png
+
+https://i.postimg.cc/MfyWCFLb/Screenshot-2025-11-02-134948.png
+
 ### What Changed?
 - ✅ **ONLY** the `web/` folder (UI) has been replaced
 - ✅ All ox_target functionality remains 100% the same
